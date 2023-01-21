@@ -59,3 +59,12 @@ pipeline {
 ```
 
 Create a new multibranch pipeline for the repo (link the git repo to it)
+
+---
+
+I'd like to note that exposing your host docker socket is not advised. I'm still looking into other alternatives to this.
+
+- https://stackoverflow.com/questions/35110146/can-anyone-explain-docker-sock
+- https://www.lvh.io/posts/dont-expose-the-docker-socket-not-even-to-a-container/
+- https://dev.to/petermbenjamin/docker-security-best-practices-45ih#docker-engine
+- https://blog.container-solutions.com/running-docker-in-jenkins-in-docker
