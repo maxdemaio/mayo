@@ -2,6 +2,16 @@
 
 Jenkins
 
+## About
+
+We need to build docker images inside a Jenkins container, as part of the CI/CD process. In my research I came across two approaches: DooD (Docker-outside-of-Docker) or differentiate from DinD (Docker-in-Docker).
+
+DinD is where a complete and isolated version of Docker is installed inside a container.
+
+The DooD appraoch involves mounting the host machine’s docker socket to the Jenkins container. With this, Jenkins can start new sibling containers. The sibling containers will run along side the Jenkins container on the host machine.
+
+We still need to install the docker client binaries inside our Jenkins container so our container can talk to the mounted docker daemon.
+
 ## Setup
 
 Build a custom image based off the official `jenkins/jenkins` image. This will include docker in the container. See [my Dockerfile](./Dockerfile).
@@ -62,9 +72,15 @@ Create a new multibranch pipeline for the repo (link the git repo to it)
 
 ---
 
-I'd like to note that exposing your host docker socket is not advised. I'm still looking into other alternatives to this.
+## Ongoing Notes
+
+I'd like to note that exposing your host docker socket is not advised. Also, DinD is a public archive now. I'm still looking into other alternatives to this. Most likely, we'd have to isolate the environment Jenkins is running in.
+
+Like, get a VM, get docker on it, then run a jenkins container inside that VM with access to the VM's docker daemon. Or, just have a node dedicated to running that Jenkins container so that even if someone gained access the whole system isn't compromised.
 
 - https://stackoverflow.com/questions/35110146/can-anyone-explain-docker-sock
 - https://www.lvh.io/posts/dont-expose-the-docker-socket-not-even-to-a-container/
 - https://dev.to/petermbenjamin/docker-security-best-practices-45ih#docker-engine
 - https://blog.container-solutions.com/running-docker-in-jenkins-in-docker
+- https://medium.com/@manav503/how-to-build-docker-images-inside-a-jenkins-container-d59944102f30
+- https://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci/
