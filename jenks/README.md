@@ -4,13 +4,13 @@ Jenkins
 
 ## About
 
-We need to build docker images inside a Jenkins container, as part of the CI/CD process. In my research I came across two approaches: DooD (Docker-outside-of-Docker) or differentiate from DinD (Docker-in-Docker).
+We need to build docker images inside a Jenkins container for the CI/CD process. In my research I came across two approaches: DooD (Docker-outside-of-Docker) and DinD (Docker-in-Docker).
 
 DinD is where a complete and isolated version of Docker is installed inside a container.
 
 The DooD appraoch involves mounting the host machine’s docker socket to the Jenkins container. With this, Jenkins can start new sibling containers. The sibling containers will run along side the Jenkins container on the host machine.
 
-We still need to install the docker client binaries inside our Jenkins container so our container can talk to the mounted docker daemon.
+By adding the Docker package to the image and adding the Jenkins user to the Docker group, we provide the permissions and dependencies for Jenkins to run Docker commands. But, since Jenkins is running in a container, it does not have direct access to the host's Docker daemon. Mounting the host's Docker socket allows the container to communicate with the host's Docker daemon and thus Jenkins can run Docker commands.
 
 ## Setup
 
