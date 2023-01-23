@@ -12,3 +12,5 @@ the mayonet
   - https://hub.docker.com/_/sonarqube
 - https://github.com/go-gitea/gitea
   - https://hub.docker.com/r/gitea/gitea
+- https://github.com/jellyfin
+  - https://hub.docker.com/r/jellyfin/jellyfin

@@ -30,10 +30,10 @@ cd ~
 mkdir jenkins
 ```
 
-Start a docker container running Jenkins which has access to the host machine's docker daemon:
+Start a docker container running Jenkins which has access to the host machine's docker daemon (named volume):
 
 ```
-docker run -d -p 8080:8080 -p 50000:50000 -v jenkins:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock myjenkins-arm64
+docker run -d -p 8080:8080 -p 50000:50000 -v ~/jenkins:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock myjenkins-arm64
 ```
 
 Install the `docker` plugin and the `docker-pipeline` plugin.
