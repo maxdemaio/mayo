@@ -4,6 +4,8 @@ the mayonet
 
 ---
 
+for all knowledge acquired during this project, visit [the knowledge folder](./knowledge/README.md).
+
 - https://github.com/jenkinsci/jenkins
   - https://hub.docker.com/r/jenkins/jenkins
 - https://github.com/FreshRSS/FreshRSS
