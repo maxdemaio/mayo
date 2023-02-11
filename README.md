@@ -1,6 +1,6 @@
 # mayonet
 
-for all knowledge acquired during this project, visit [the knowledge folder](./knowledge/README.md).
+for all knowledge acquired during this project, visit [the knowledge folder](./knowledge/).
 
 ---
 
