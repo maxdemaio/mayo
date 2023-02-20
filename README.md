@@ -1,8 +1,10 @@
 # mayonet
 
-for all knowledge acquired during this project, visit [the knowledge folder](./knowledge/).
+for all knowledge acquired during this project, visit [the knowledge folder](./knowledge/). I'll probably turn them into a series of blog posts on my website soon.
 
 ---
+
+ideas:
 
 - https://github.com/jenkinsci/jenkins
   - https://hub.docker.com/r/jenkins/jenkins
