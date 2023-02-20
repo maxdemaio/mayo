@@ -1,30 +1,35 @@
-# Installing Ubuntu Linux on a Windows XPS 13 Laptop
+# Installing Ubuntu on a Windows 10 Dell XPS-13
 
-To remove Windows and install Ubuntu Linux on a computer, you can follow these steps:
+To put Ubuntu Linux on a Windows computer, we have a few options:
 
-1. Backup your data: Before starting the process, make sure to backup all your important data, files, and documents as the installation process will erase everything on the hard drive.
+- Dual booting: This involves installing Ubuntu alongside Windows on the same computer. When you turn on your computer, you will be given the option to choose which operating system to boot into. To do this, you need to create a bootable USB drive with the Ubuntu ISO file, then restart your computer and boot from the USB drive. Follow the prompts to install Ubuntu alongside Windows.
 
-2. Download Ubuntu: Visit the official website of Ubuntu and download the latest version of the operating system. You can also choose to download Ubuntu from other sources, but make sure to download it from a reputable source.
+- Virtualization: You can run Ubuntu as a virtual machine within Windows using virtualization software such as VirtualBox or VMware. This option allows you to run Ubuntu as a program within Windows, without the need to reboot your computer. However, this option may not provide optimal performance.
 
-3. Create a bootable USB drive: After downloading the Ubuntu ISO file, you'll need to create a bootable USB drive to install Ubuntu. You can use a tool like Rufus to create the bootable drive.
+- WSL (Windows Subsystem for Linux): This is a feature of Windows 10 that allows you to run Linux command-line tools directly on Windows. To use WSL, you need to enable it in the Windows Features settings and then download and install Ubuntu from the Microsoft Store.
 
-4. Boot from the USB drive: Insert the bootable USB drive into your computer and restart your machine. As it starts, press the key to enter the BIOS or UEFI setup, and set your computer to boot from the USB drive.
+- If you want to remove Windows completely and replace it with Ubuntu Linux, you will need to perform a clean installation of Ubuntu on your computer.
 
-5. Install Ubuntu: Once your computer boots from the USB drive, you'll see the Ubuntu installer. Follow the instructions to install Ubuntu. You'll be asked to select the language, keyboard layout, time zone, and create a user account. Make sure to select "Erase disk and install Ubuntu" to remove Windows and install Ubuntu.
+For me, I had a Dell XPS-13 laptop with Windows 10. I chose to completely replace Windows with Ubuntu Linux. This is because I'll be using it for application self-hosting purposes.
 
-6. Wait for the installation to complete: The installation process may take some time, depending on the speed of your computer. Once the installation is complete, restart your computer and log in to your new Ubuntu operating system.
-
-7. Update and upgrade: After logging in, update the system and upgrade to the latest version of Ubuntu by running the following command in the terminal:
-
-```
-sudo apt update
-sudo apt upgrade
-```
-
-That's about it! We have installed Ubuntu Linux on the laptop and removed Windows.
+Before proceeding, it's important to back up any important data on your computer and make sure you have enough free space to install Ubuntu. It's also recommended to do some research and read through the installation instructions carefully before proceeding.
 
 ## Bootable USB Drive
 
 You can use any USB drive with a minimum capacity of 4 GB to create a bootable drive to install Ubuntu. However, it's recommended to use a USB drive with at least 8 GB of storage to ensure that you have enough space to store the operating system and any additional software you may want to install.
 
 Keep in mind that if you plan to use the USB drive for other purposes in the future, the contents of the drive will be deleted during the creation of the bootable drive. So, make sure to backup any important files before proceeding with the process.
+
+## Replacing Windows with Ubuntu Linux
+
+Insert the bootable USB drive into your computer and restart your computer. As your computer starts up, press the appropriate key to enter the boot menu, which is usually F12 or Del. Select the USB drive from the boot menu to start the Ubuntu installation process.
+
+Install Ubuntu: Follow the installation prompts and select the option to erase the entire disk and install Ubuntu. This will remove Windows and all its data from your computer and install Ubuntu in its place.
+
+Complete the installation: Once the installation is complete, you will be prompted to set up your user account and other system settings.
+
+It's important to note that this process will permanently delete all your Windows data, so make sure you have backed up all important files before proceeding. Additionally, you may need to install additional drivers and software to get your hardware working properly with Ubuntu.
+
+For me, I also had to disable RST in the Windows boot menu. This is because the Ubuntu installer detected a conflict. I referred to [Ubuntu's official documentation](https://help.ubuntu.com/rst/index.html) to understand how to change this.
+
+That's it! After setting up my bootable USB drive, I was able to install Ubuntu Linux on my Windows 10 Dell XPS-13 laptop.
