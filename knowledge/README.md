@@ -8,3 +8,4 @@ table of contents:
 - [Installing Ubuntu Linux on a Windows XPS 13 Laptop](./bootingLinux.md)
 - [Jenkins](./jenks/README.md)
 - [Gitea](./gitea/README.md)
+- [Apt, Git and Docker](./serverSetup.md)
