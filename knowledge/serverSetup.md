@@ -35,4 +35,36 @@ There are multiple ways to install Docker Engine:
 - Install it manually and manage upgrades manually
 - Use a convenience script
 
+I directly installed Docker Engine with Docker's apt repository with their [instructions](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository).
 
+To ensure all this works we can run
+
+```
+sudo docker run hello-world
+```
+
+After installation, the `docker` user group exists (on some Linux distros) but contains no users. So, you'd have to use `sudo` to run docker commands. The Docker daemon binds to aUnix socket, not a TCP port. By default it's the `root` user that owns the Unix socket. Other users can only access it with `sudo`. The Docker daemon always runs as the `root` user.
+
+We can check if it exists with:
+
+```
+cat /etc/group | grep docker
+```
+
+If it doesn't exist, create it like so:
+
+```
+sudo groupadd docker
+```
+
+Then add our user to the `docker` group:
+
+```
+sudo usermod -aG docker $USER
+```
+
+Then, log out and log back in so the group membership is re-evaluated. Finally, we can verify we can run `docker` commands without `sudo` like:
+
+```
+docker run hello-world
+```
