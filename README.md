@@ -16,3 +16,4 @@ ideas:
   - https://hub.docker.com/r/gitea/gitea
 - https://github.com/jellyfin
   - https://hub.docker.com/r/jellyfin/jellyfin
+- https://github.com/DIYgod/RSSHub
