@@ -68,3 +68,18 @@ Then, log out and log back in so the group membership is re-evaluated. Finally, 
 ```
 docker run hello-world
 ```
+
+### Docker Compose V2
+
+Since I'm on Ubuntu, we can install the latest version of Docker Compose:
+
+```
+sudo apt-get update
+sudo apt-get install docker-compose-plugin
+```
+
+You can verify it worked by running:
+
+```
+docker compose version
+```
