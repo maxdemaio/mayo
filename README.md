@@ -1,10 +1,6 @@
 # mayonet
 
-for all knowledge acquired during this project, visit [the knowledge folder](./knowledge/). I'll probably turn them into a series of blog posts on my website soon.
-
----
-
-ideas:
+## Ideas
 
 - https://github.com/jenkinsci/jenkins
   - https://hub.docker.com/r/jenkins/jenkins
@@ -17,3 +13,11 @@ ideas:
 - https://github.com/jellyfin
   - https://hub.docker.com/r/jellyfin/jellyfin
 - https://github.com/DIYgod/RSSHub
+
+## Knowledge
+
+general knowledge acquired while building the mayonet:
+
+- [Host, Anonymous, and Named Docker Volumes](https://maxdemaio/blog/hostAnonNamedDockerVolumes)
+- [Installing Ubuntu Linux on a Windows XPS 13 Laptop](https://maxdemaio/blog/bootingLinux.md)
+- [Jenkins Container That Uses Docker on a M1 Mac](https://maxdemaio/blog/jenks)
