@@ -44,4 +44,4 @@ After, we can run the compose file with the command (-d for detached mode):
 docker-compose up -d
 ```
 
-When you set up the initial configuration of gitea, make sure your "ssh domain" matches port 222 like in the compose file. After this is all set, you need to create a SSH key, and add it to gitea. So, you'll have a private key on your local and the public key on gitea. This will authenticate you
+When you set up the initial configuration of gitea, make sure your "ssh domain" matches port 222 like in the compose file. After this is all set, you need to create a SSH key, and add it to gitea. So, you'll have a private key on your local and the public key on gitea. This will authenticate you.
